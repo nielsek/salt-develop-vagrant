@@ -13,7 +13,7 @@ drop-iptables:
     - table: filter
     - chain: INPUT
     - proto: tcp
-    - tcp-flags: "FIN,SYN,RST,ACK SYN"
+    - tcp-flags: "! FIN,SYN,RST,ACK SYN"
     - match: state
     - connstate: NEW
     - jump: DROP

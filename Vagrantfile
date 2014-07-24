@@ -12,7 +12,6 @@ Vagrant.configure("2") do |config|
   #end
 
   config.vm.synced_folder "salt", "/srv/salt/"
-  config.vm.synced_folder "pillar", "/srv/pillar/"
 
   config.vm.provision :salt do |salt|
     salt.verbose = true

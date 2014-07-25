@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :salt do |salt|
     salt.verbose = true
-    salt.install_type = "git"
+    salt.install_type = "-g git://github.com/nielsek/salt.git git"
     salt.install_args = "develop"
     salt.minion_config = "minion"
     salt.run_highstate = true
